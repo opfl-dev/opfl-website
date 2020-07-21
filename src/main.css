@@ -1,0 +1,112 @@
+:root {
+    --opfl-orange: #FF7A00;
+}
+
+body {
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.bg-black {
+    background-color: rgba(0,0,0,0.9);
+}
+
+.navbar-logo {
+    height: 24px;
+}
+
+.navbar-donate {
+    color: var(--opfl-orange)
+}
+
+.intro-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    min-height: 90vh;
+    width: 100%;
+
+    background-image: url('assets/owen-beard.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 30%;
+}
+
+.intro-page > .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 50px 0 20px 0;
+}
+
+.intro-page > .content-wrapper > .about {
+    padding: 20px;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.intro-page > .content-wrapper > .about > .header {
+    font-size: 1.5em;
+}
+
+.intro-page > .content-wrapper > .about > .body {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.intro-page > .content-wrapper > .support {
+    background-color: var(--opfl-orange);
+    margin: 20px;
+
+    padding: 8px 24px 8px 24px;
+    border-radius: 10px;
+}
+
+
+.nav-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 100vh;
+    margin-top: -1px;
+
+    background-image: url(assets/brain.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: grayscale();
+    background-attachment: fixed;
+}
+
+.nav-page > .content-wrapper {
+    padding: 50px 0 20px 0;
+}
+
+.card-wrapper > .card {
+    padding: 60px 24px 24px 24px;
+    margin: 32px;
+
+    min-height: 200px;
+    max-width: 300px;
+    border-radius: 20px;
+}
+
+.card > .card-img-top {
+    min-width: auto;
+    height: 150px;
+}
+
+.card > .card-body {
+    height: 50%;
+}
+
+.card > .card-body > .card-title {
+    text-align: center;
+}
+
+
