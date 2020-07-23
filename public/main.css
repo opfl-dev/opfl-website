@@ -1,5 +1,9 @@
 :root {
     --opfl-orange: #FF7A00;
+
+    --contribute-banner-slant: 5vh;
+    --contribute-banner-center-offset: 70px;
+
 }
 
 body {
@@ -26,7 +30,9 @@ body {
     align-items: center;
     color: white;
 
-    min-height: 90vh;
+    height: 90vh;
+    min-height: 800px;
+    max-height: 1000px;
     width: 100%;
 
     background-image: url('assets/owen-beard.jpg');
@@ -40,6 +46,7 @@ body {
     flex-direction: column;
     align-items: flex-end;
     padding: 50px 0 20px 0;
+    max-width: 800px;
 }
 
 .intro-page > .content-wrapper > .about {
@@ -109,34 +116,51 @@ body {
 }
 
 .card-wrapper {
-    padding: 50px 0 200px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    max-width: 800px;
+    width: 100%;
+    padding: 100px 0 200px 0;
 }
 
 .card-wrapper > .card {
-    padding: 60px 24px 24px 24px;
-    margin: 32px;
+    padding: 32px 16px 24px 16px;
+    margin: 32px 16px 32px 16px;
 
     min-height: 200px;
-    max-width: 300px;
+    max-height: 400px;
+
+    width: 100%;
+    min-width: 150px;
+    max-width: 220px;
     border-radius: 20px;
 }
 
 .card > .card-img-top {
     min-width: auto;
     height: 150px;
+    /* padding: 10px; */
 }
 
 .card > .card-body {
     height: 50%;
+    padding: 0;
+    padding-top: 10px;
 }
 
 .card > .card-body > .card-title {
     text-align: center;
+    font-size: 1.5em;
 }
 
 .contribute-page {
     z-index: 2;
     height: 100vh;
+    min-height: 600px;
+    max-height: 700px;
     width: 100vw;
     margin-top: -160px;
     padding-top: 40px;
@@ -154,7 +178,12 @@ body {
     z-index: 0;
     content: "";
 
-    clip-path: polygon(0 calc(50% + 20px), 0 20px, 100% 0, 100% 50%);
+    clip-path: polygon(
+        0 calc(50% + var(--contribute-banner-center-offset) + var(--contribute-banner-slant)), 
+        0 var(--contribute-banner-slant), 
+        100% 0, 
+        100% calc(50% + var(--contribute-banner-center-offset))
+    );
     background-color: var(--opfl-orange);
 
     top: 0;
@@ -169,6 +198,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
     top: 0;
     bottom: 0;
     left: 0;
@@ -177,9 +207,13 @@ body {
 
 .contribute-page > .wrapper > .content.clipped {
     z-index: 10;
-    clip-path: polygon(0 calc(50% + 20px), 0 20px, 100% 0, 100% 50%);
+    clip-path: polygon(
+        0 calc(50% + var(--contribute-banner-center-offset) + var(--contribute-banner-slant)), 
+        0 var(--contribute-banner-slant), 
+        100% 0, 
+        100% calc(50% + var(--contribute-banner-center-offset))
+    );
 }
-
 
 .content > .inner-box {
     display: flex;
@@ -189,10 +223,12 @@ body {
 
     border: 5px solid white;
     border-radius: 20px;
-    padding: 10px;
-    color: white; 
-    margin: 50px;
-    min-height: 300px;
+    padding: 20px;
+    color: white;
+    
+    max-width: 350px;
+    margin: 20px;
+    min-height: 400px;
 }
 
 .content:not(.clipped) > .inner-box {
@@ -204,6 +240,42 @@ body {
     background-color: black;
     border-radius: 10px;
     padding: 8px 24px 8px 24px;
-    border-radius: 10px;
     color: white;
+}
+
+.inner-box > .text > h3 {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+
+@media only screen and (min-width: 600px) {
+    .intro-page > .content-wrapper {
+        margin: 40px;
+    }
+
+    .intro-page > .content-wrapper > .support {
+        margin-right: 0;
+    }
+
+    .nav-page > .content-wrapper > .card-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card > .card-body > .card-title {
+        font-size: 2em;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+
+@media only screen and (min-width: 992px) {
+
+}
+
+@media only screen and (min-width: 1200px) {
+
 }
