@@ -2,7 +2,7 @@
     --opfl-orange: #FF7A00;
     
     --contribute-banner-slant: 5vh;
-    --contribute-banner-center-offset: 70px;
+    --contribute-banner-center-offset: calc(75px);
 
 }
 
@@ -67,7 +67,7 @@ body {
     color: white;
 
     height: 90vh;
-    min-height: 800px;
+    min-height: 900px;
     max-height: 1000px;
     width: 100%;
 
@@ -86,7 +86,7 @@ body {
 }
 
 .intro-page > .content-wrapper > .about {
-    padding: 20px;
+    padding: 10px;
     background-color: rgba(0,0,0,0.8);
 }
 
@@ -108,7 +108,7 @@ body {
 }
 
 .intro-page > .content-wrapper > .support::hover {
-    filter: 
+    
 }
 
 .button {
@@ -171,7 +171,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 
     max-width: 800px;
     width: 100%;
@@ -180,7 +180,7 @@ body {
 
 .card-wrapper > .card {
     padding: 32px 16px 24px 16px;
-    /* margin: 32px 16px 32px 16px; */
+    margin: 16px;
 
     min-height: 350px;
     height: 100%;
@@ -276,12 +276,11 @@ body {
 
     border: 5px solid white;
     border-radius: 20px;
-    padding: 20px;
+    padding: 10px;
     color: white;
-    
     max-width: 350px;
     margin: 20px;
-    min-height: 400px;
+    min-height: 370px;
 }
 
 .content:not(.clipped) > .inner-box {
@@ -311,11 +310,6 @@ body {
         margin-right: 0;
     }
 
-    .nav-page > .content-wrapper > .card-wrapper {
-        display: flex;
-        flex-direction: row;
-    }
-
     .card > .card-body > .card-title {
         font-size: 2em;
     }
@@ -329,7 +323,11 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
-
+    
+    .nav-page > .content-wrapper > .card-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 @media only screen and (min-width: 992px) {
